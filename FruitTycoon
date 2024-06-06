@@ -17,9 +17,13 @@ Tab1:AddButton({"Auto Rebirth", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
+    local originalposition = humanoidRootPart.Position
+    
     local autorebirth = CFrame.new(-136.707565, -296.563812, -762.002319)
     humanoidRootPart.CFrame = autorebirth
+
+    wait(0.1)
+    humanoidRootPart.CFrame = originalposition
 end})
 
 Tab1:AddButton({"CollectMoney", function()
