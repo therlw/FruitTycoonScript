@@ -13,7 +13,7 @@ local Tab2 = Window:MakeTab({"PlayerScripts", "cool"})
 
 --Buttons
 
-Tab1:AddButton({"Auto Rebirth", function()
+Tab1:AddButton({"Rebirth", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
