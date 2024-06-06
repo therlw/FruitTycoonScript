@@ -24,7 +24,7 @@ local collectmoney = Vector3.new(-82.7967072, -296.982666, -502.607605)
 
 humanoidRootPart.CFrame = CFrame.new(collectmoney)
 
-wait(2)
+wait(1)
 humanoidRootPart.CFrame = CFrame.new(originalPosition)
 end})
 
