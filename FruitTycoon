@@ -1,10 +1,9 @@
-
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
 
 local Window = redzlib:MakeWindow({
-  Title = "Fruit Tycoon Script By RLW",
-  SubTitle = "Merhaba !",
-  SaveFolder = "Redz Config"
+    Title = "Fruit Tycoon Script By RLW",
+    SubTitle = "Merhaba !",
+    SaveFolder = "Redz Config"
 })
 
 --Tabs
@@ -19,35 +18,32 @@ Tab1:AddButton({"Auto Rebirth", function()
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-local autorebirth = Vector3.new(-136.707565, -296.563812, -762.002319, 0, 0, -1, 1, 0, 0, 0, -1, 0)
-humanoidRootPart.CFrame = CFrame.new(autorebirth)
-end
-})
-
-
+    local autorebirth = CFrame.new(-136.707565, -296.563812, -762.002319)
+    humanoidRootPart.CFrame = autorebirth
+end})
 
 Tab1:AddButton({"CollectMoney", function()
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-local originalPosition = humanoidRootPart.Position
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+    local originalPosition = humanoidRootPart.Position
 
-local collectmoney = Vector3.new(-82.7967072, -296.982666, -502.607605)
+    local collectmoney = Vector3.new(-82.7967072, -296.982666, -502.607605)
 
-humanoidRootPart.CFrame = CFrame.new(collectmoney)
+    humanoidRootPart.CFrame = CFrame.new(collectmoney)
 
-wait(0.1)
-humanoidRootPart.CFrame = CFrame.new(originalPosition)
+    wait(0.1)
+    humanoidRootPart.CFrame = CFrame.new(originalPosition)
 end})
 
 
 Tab2:AddSlider({
-  Name = "Speed",
-  Min = 1,
-  Max = 100,
-  Increase = 1,
-  Default = 16,
-  Callback = function(Value)
-  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-  end
+    Name = "Speed",
+    Min = 1,
+    Max = 100,
+    Increase = 1,
+    Default = 16,
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end
 })
