@@ -16,8 +16,8 @@ local Tab2 = Window:MakeTab({"PlayerScripts", "cool"})
 
 Tab1:AddButton({"Auto Rebirth", function()
     local player = game.Players.LocalPlayer
-    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
     local character = player.Character or player.CharacterAdded:Wait()
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
 local autorebirth = Vector3.new(-136.707565, -296.563812, -762.002319, 0, 0, -1, 1, 0, 0, 0, -1, 0)
 humanoidRootPart.CFrame = CFrame.new(autorebirth)
