@@ -22,7 +22,7 @@ Tab1:AddButton({"Rebirth", function()
     local autorebirth = CFrame.new(647.814758, -297.917511, -761.008057, 8.10623169e-05, 8.10623169e-05, -1, 1, 8.10623169e-05, 8.10623169e-05, 8.10623169e-05, -1, -8.10623169e-05)
     humanoidRootPart.CFrame = autorebirth
 
-    wait(0.1)
+    wait(1)
     humanoidRootPart.CFrame = CFrame.new(originalposition)
 end})
 
