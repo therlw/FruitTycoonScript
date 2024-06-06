@@ -1,0 +1,41 @@
+
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
+
+local Window = redzlib:MakeWindow({
+  Title = "Fruit Tycoon Script By RLW",
+  SubTitle = "Merhaba !",
+  SaveFolder = "Redz Config"
+})
+
+--Tabs
+
+local Tab1 = Window:MakeTab({"AutoFarming", "cool"})
+local Tab2 = Window:MakeTab({"PlayerScripts", "cool"})
+
+--Buttons
+
+Tab1:AddButton({"CollectMoney", function()
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local originalPosition = humanoidRootPart.Position
+
+local collectmoney = Vector3.new(-82.7967072, -296.982666, -502.607605)
+
+humanoidRootPart.CFrame = CFrame.new(collectmoney)
+
+wait(2)
+humanoidRootPart.CFrame = CFrame.new(originalPosition)
+end})
+
+
+Tab2:AddSlider({
+  Name = "Speed",
+  Min = 1,
+  Max = 100,
+  Increase = 1,
+  Default = 16,
+  Callback = function(Value)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+  end
+})
