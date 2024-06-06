@@ -23,7 +23,7 @@ Tab1:AddButton({"Auto Rebirth", function()
     humanoidRootPart.CFrame = autorebirth
 
     wait(0.1)
-    humanoidRootPart.CFrame = originalposition
+    humanoidRootPart.CFrame = CFrame.new(originalposition)
 end})
 
 Tab1:AddButton({"CollectMoney", function()
