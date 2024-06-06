@@ -19,7 +19,7 @@ Tab1:AddButton({"Auto Rebirth", function()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
     local originalposition = humanoidRootPart.Position
     
-    local autorebirth = CFrame.new(-136.707565, -296.563812, -762.002319)
+    local autorebirth = CFrame.new(647.814758, -297.917511, -761.008057, 8.10623169e-05, 8.10623169e-05, -1, 1, 8.10623169e-05, 8.10623169e-05, 8.10623169e-05, -1, -8.10623169e-05)
     humanoidRootPart.CFrame = autorebirth
 
     wait(0.1)
