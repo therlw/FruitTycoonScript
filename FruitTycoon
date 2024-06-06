@@ -1,5 +1,5 @@
 
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/therlw/FruitTycoonScript/main/Redz%20U%C4%B0",true))()
 
 local Window = redzlib:MakeWindow({
   Title = "Fruit Tycoon Script By RLW",
